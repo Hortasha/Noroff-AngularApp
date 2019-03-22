@@ -11,6 +11,12 @@ import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.co
 import { WeatherService } from './services/weather/weather.service';
 import { WeatherCardComponent } from './components/weather-card/weather-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { JobCardComponent } from './components/job-card/job-card.component';
+import { JobService } from './services/job/job.service';
+import { PokemonService } from './services/pokemon/pokemon.service';
+import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
+import { CryptoService } from './services/crypto/crypto.service';
+import { CryptoCardComponent } from './components/crypto-card/crypto-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     LoginFormComponent,
     LoginPageComponent,
     DashboardPageComponent,
-    WeatherCardComponent
+    WeatherCardComponent,
+    JobCardComponent,
+    PokemonCardComponent,
+    CryptoCardComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthService, WeatherService],
+  providers: [AuthService, WeatherService, JobService, PokemonService, CryptoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
