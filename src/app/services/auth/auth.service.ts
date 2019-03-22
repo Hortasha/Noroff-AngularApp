@@ -21,7 +21,7 @@ export class AuthService {
   }
 
   isAuthorized() {
-    return this.autherized.success;
+    return window.localStorage.getItem('token');
   }
 
   login(username:string, password:string) {
