@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(private authService: AuthService, private router: Router) {
     if(this.authService.isAuthorized()) {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['dashboard']);
     } else {
-      this.router.navigate(['/login'])
+      this.router.navigate(['login'])
     }
   }
 }

@@ -1,3 +1,6 @@
-<p>
-  dashboard-page works!
-</p>
+<div *ngIf="weatherData.length > 0">
+  <app-weather-card
+    *ngFor="let weather of weatherData"
+    [weather]="weather">
+  </app-weather-card>
+</div>

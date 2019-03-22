@@ -8,20 +8,25 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { AuthService } from './services/auth/auth.service';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { WeatherService } from './services/weather/weather.service';
+import { WeatherCardComponent } from './components/weather-card/weather-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     LoginPageComponent,
-    DashboardPageComponent
+    DashboardPageComponent,
+    WeatherCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

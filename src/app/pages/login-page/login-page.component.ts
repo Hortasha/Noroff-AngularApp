@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
     if(!loginResult.success) {
       this.loginErrorMessage = loginResult.message;
     } else {
-      this.router.navigate(['/dashboard'])
+      this.router.navigate(['dashboard']);
     }
   }
 }
