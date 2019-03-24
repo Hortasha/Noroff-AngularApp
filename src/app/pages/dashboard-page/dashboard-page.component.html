@@ -1,34 +1,37 @@
 <div class="navbar">
-  <button (click)="displayWeather()">Weather</button>
-  <button (click)="displayJobs()">Jobs</button>
-  <button (click)="displayPokemons()">Pokemon</button>
-  <button (click)="displayCrypto()">Crypto</button>
+  <h1>SELECT CATEGORY</h1>
+  <button class="weather" (click)="displayWeather()">Weather</button>
+  <button class="jobs" (click)="displayJobs()">Jobs</button>
+  <button class="pokemons" (click)="displayPokemons()">Pokemon</button>
+  <button class="crypto" (click)="displayCrypto()">Crypto</button>
 </div>
 
-<div *ngIf="weatherData.length > 0 && display==='weather'">
-  <app-weather-card
-    *ngFor="let weather of weatherData"
-    [weather]="weather">
-  </app-weather-card>
-</div>
-
-<div *ngIf="jobsData.length > 0 && display==='jobs'">
-  <app-job-card
-    *ngFor="let job of jobsData"
-    [job]="job">
-  </app-job-card>
-</div>
-
-<div *ngIf="pokemonsData.length > 0 && display==='pokemons'">
-  <app-pokemon-card
-    *ngFor="let pokemon of pokemonsData"
-    [pokemon]="pokemon">
-  </app-pokemon-card>
-</div>
-
-<div *ngIf="cryptoData.length > 0 && display==='crypto'">
-  <app-crypto-card
-    *ngFor="let crypto of cryptoData"
-    [crypto]="crypto">
-  </app-crypto-card>
+<div class="container">
+  <div *ngIf="weatherData.length > 0 && display==='weather'">
+    <app-weather-card
+      *ngFor="let weather of weatherData"
+      [weather]="weather">
+    </app-weather-card>
+  </div>
+  
+  <div *ngIf="jobsData.length > 0 && display==='jobs'">
+    <app-job-card
+      *ngFor="let job of jobsData"
+      [job]="job">
+    </app-job-card>
+  </div>
+  
+  <div *ngIf="pokemonsData.length > 0 && display==='pokemons'">
+    <app-pokemon-card
+      *ngFor="let pokemon of pokemonsData"
+      [pokemon]="pokemon">
+    </app-pokemon-card>
+  </div>
+  
+  <div *ngIf="cryptoData.length > 0 && display==='crypto'">
+    <app-crypto-card
+      *ngFor="let crypto of cryptoData"
+      [crypto]="crypto">
+    </app-crypto-card>
+  </div>
 </div>

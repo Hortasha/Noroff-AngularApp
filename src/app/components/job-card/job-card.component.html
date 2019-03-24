@@ -1,7 +1,8 @@
-<p>
-  {{job.company}}<br>
-  {{job.logo}}<br>
-  {{job.location}}<br>
-  {{job.type}}<br>
-  {{job.url}}
-</p>
+<div class="card">
+  <img [src]="job.logo" alt="{{job.company}}">
+  <h3>{{job.company}}</h3>
+  <p>Type: {{job.type}}</p>
+  <p>Location: {{job.location}}</p>
+  <a href="{{job.url}}">Go to job</a>
+</div>
+  

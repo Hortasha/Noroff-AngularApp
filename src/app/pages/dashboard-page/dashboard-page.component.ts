@@ -90,9 +90,12 @@ export class DashboardPageComponent {
       this.pokemonService.getPokemons().subscribe((response:any) => {
 
         for(let i = 0; i < response.results.length; i++) {
+          let name: string = response.results[i].name;
+          name = (name[0].toUpperCase() + name.substring(1, name.length));
+          
           let pokemon: PokemonModel = {
             id: i+1,
-            name: response.results[i].name,
+            name: name,
             img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+(i+1)+'.png'
           }
           allPokemons.push(pokemon);

@@ -1,0 +1,28 @@
+form {
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+button {
+    background-color: lightgreen;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+
+    &:hover {
+        background-color: darken(lightgreen, 15%);
+        cursor: pointer;
+    }
+}
+
+input {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+}

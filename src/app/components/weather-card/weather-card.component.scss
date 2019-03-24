@@ -1,0 +1,17 @@
+.card {
+    width: 33.33%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 20px;
+    vertical-align: top;
+}
+
+p, h3 {
+    font-family: Calibri;
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 100%;
+    }
+}

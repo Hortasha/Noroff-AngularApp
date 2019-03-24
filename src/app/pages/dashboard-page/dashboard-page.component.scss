@@ -1,0 +1,51 @@
+.navbar {
+    text-align: center;
+}
+
+h1 {
+    font-family: Calibri;
+    font-weight: 100;
+}
+
+button {
+    border: none;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.weather {
+    background-color: lightblue;
+    &:hover {
+        background-color: darken(lightblue, 15%);
+    }
+}
+
+.pokemons {
+    background-color: lightgreen;
+    &:hover {
+        background-color: darken(lightgreen, 15%);
+    }
+}
+
+.crypto {
+    background-color: lighten(yellow, 20%);
+    &:hover {
+        background-color: yellow;
+    }
+}
+
+.jobs {
+    background-color: lightcoral;
+    &:hover {
+        background-color: darken(lightcoral, 15%);
+    }
+}
+
+.container {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
